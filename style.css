@@ -1,5 +1,5 @@
 body {
-    background-color: #F9ECF7;
+    background-color: #f9ecf7;
     font-family: 'Unbounded';
     font-size: 18px;
     color: #000000;
@@ -62,4 +62,26 @@ a:hover {
 
 .special-note {
     color: red !important;
+}
+
+ul {
+    padding: 20px;
+    padding-left: 40px;
+    border-left: 4px solid #C080A0;
+    border-bottom: 4px solid #C080A0;
+    border-radius: 16px;
+}
+
+ol {
+    padding: 20px;
+    padding-left: 40px;
+    border-left: 4px solid #C080A0;
+}
+
+dl {
+    padding: 20px;
+    padding-left: 40px;
+    border-left: 4px solid #C080A0;
+    border-top: 4px solid #C080A0;
+    border-radius: 16px;
 }
