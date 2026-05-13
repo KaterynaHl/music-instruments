@@ -1,32 +1,29 @@
 body {
     background-color: #F9ECF7;
-    
     font-family: 'Unbounded';
-
     font-size: 18px;
-
     color: #000000;
-
     line-height: 1.6;
-
     margin: 20px;
 };
 
 h1 {
     color: #000000;
-
     text-align: center;
-
     font-size: 42px;
-
     letter-spacing: 2px;
 }
 
 h2 {
     color: #3a1a2f;
-
     font-size: 30px;
 }
+
+p {
+    padding: 16px;
+    border-radius: 12px;
+}
+
 
 /* посилання */
 a {
@@ -51,4 +48,17 @@ a:hover {
 .main-table th {
     border: 2px solid black;
     padding: 10px;
+}
+
+#important-title {
+    color: darkred;
+    width: fit-content;
+    font-weight: bold;
+    background-color: #fae9e9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 5px solid rgb(0, 0, 0);
+    border-right: 5px solid rgb(0, 0, 0);
 }
