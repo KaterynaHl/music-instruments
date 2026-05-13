@@ -111,3 +111,18 @@ caption {
     margin-bottom: 16px;
     font-size: 28px;
 }
+
+/* контекстний селектор до елемента всередині іншого */
+ul li {
+    color: #5C2A4A;
+}
+
+/* дочірній селектор */
+body > h1 {
+    text-transform: uppercase;
+}
+
+/* сусідній селектор */
+h2 + ul {
+    background-color: #dae4f3bd;
+}
