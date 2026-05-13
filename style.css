@@ -28,9 +28,7 @@ p {
 /* посилання */
 a {
     color: #3762ae;
-
     text-decoration: none;
-
     font-weight: normal;
 }
 
@@ -40,7 +38,6 @@ a:hover {
 
 .main-table {
     border: 2px solid black;
-
     border-collapse: collapse;
 }
 
