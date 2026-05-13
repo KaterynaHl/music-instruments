@@ -89,7 +89,7 @@ dl {
 table {
     width: 90%;
     border-collapse: collapse;
-    margin-bottom: 60 px;
+    margin-bottom: 60px;
     background-color: white;
 }
 
@@ -107,9 +107,7 @@ td {
 }
 
 caption {
-
     padding-top: 24px;
     margin-bottom: 16px;
     font-size: 28px;
-
 }
