@@ -32,8 +32,20 @@ a {
     font-weight: normal;
 }
 
+a:visited {
+    color: #5C2A4A;
+}
+
+a:link {
+    color: #3762ae;
+}
+
 a:hover {
-    color: #761a6e;
+    color: #9e719a;
+}
+
+a:active {
+    color: red;
 }
 
 .main-table {
