@@ -29,3 +29,11 @@ function developerInfo(lastName, firstName, position = "Студент") {
 }
 
 developerInfo("Глеба", "Катерина");
+
+// зміна фону
+document.body.style.backgroundColor = "#d8e8ff";
+
+setTimeout(function () {
+    document.body.style.backgroundColor = "#f9ecf7";
+}, 30000);
+
