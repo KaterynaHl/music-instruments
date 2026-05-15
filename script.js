@@ -37,3 +37,6 @@ setTimeout(function () {
     document.body.style.backgroundColor = "#f9ecf7";
 }, 30000);
 
+function goToGallery() {
+    location.href = "gallery.html";
+}
