@@ -15,3 +15,17 @@ function userDialog() {
 }
 
 userDialog();
+
+function developerInfo(lastName, firstName, position = "Студент") {
+
+    alert(
+        "Розробник: " +
+        lastName +
+        " " +
+        firstName +
+        "\nПосада: " +
+        position
+    );
+}
+
+developerInfo("Глеба", "Катерина");
