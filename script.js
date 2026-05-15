@@ -52,3 +52,22 @@ if (importantText) {
     else {
     console.error("Element with id 'important-title' not found.");
 }
+
+const note =
+document.getElementById("important-title");
+
+if (note) {
+    note.after(" Додатковий текст після елемента.");
+}
+
+let newParagraph = document.createElement("p");
+
+let text = document.createTextNode("Новий абзац через JavaScript");
+
+newParagraph.append(text);
+
+document.body.append(newParagraph);
+
+document.body.append("Додатковий текст");
+
+document.body.prepend("Початок сторінки ");

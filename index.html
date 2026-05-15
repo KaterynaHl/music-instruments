@@ -67,6 +67,39 @@
         Перейти до галереї
     </button>
 
-<script src="script.js"></script>
+    <script>
+        const message = document.createElement("p");
+        message.textContent = "JavaScript успішно підключений!";
+        document.body.appendChild(message);
+    </script>
+    <script>
+        let fact = document.getElementById("important-title");
+
+        if (fact) {
+
+            let newTitle =
+            document.createElement("h3");
+
+            newTitle.textContent = "Текст було замінено";
+
+            fact.replaceWith(newTitle);
+        }
+    </script>
+
+    <script>
+
+    document.write("<p>document.write() працює!</p>");
+    
+    </script>
+
+    <script>
+   let note = document.querySelector(".special-note");
+    
+    if (note) { 
+        note.remove();
+    }
+     </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
