@@ -40,3 +40,15 @@ setTimeout(function () {
 function goToGallery() {
     location.href = "gallery.html";
 }
+const importantText = document.getElementById("important-title");
+
+if (importantText) {
+    importantText.innerHTML = "<b>Оновлений цікавий факт про трембіту!</b>";
+
+    console.log(importantText.outerHTML);
+    console.log(importantText.textContent);
+    console.log(importantText.firstChild.data);
+} 
+    else {
+    console.error("Element with id 'important-title' not found.");
+}
