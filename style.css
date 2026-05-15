@@ -60,7 +60,7 @@ a:hover {
     border-right: 5px solid rgb(0, 0, 0);
 }
 
-.special-note {
+.special-note {  
     color: red !important;
 }
 
@@ -125,4 +125,32 @@ body > h1 {
 /* сусідній селектор */
 h2 + ul {
     background-color: #dae4f3bd;
+}
+
+.navigation ul {
+    overflow: hidden;
+    float: left;
+    position: fixed
+}
+
+.navigation li {
+    float: left;
+    margin-right: 128px;
+}
+
+.highlight {
+    color: rgb(65, 0, 91);
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgb(205, 197, 247);
+}
+
+/* властивість position в info */
+.fixed-note {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fae9e9;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #C080A0;
 }
