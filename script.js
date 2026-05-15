@@ -50,7 +50,7 @@ if (importantText) {
     console.log(importantText.firstChild.data);
 } 
     else {
-    console.error("Element with id 'important-title' not found.");
+    console.error("Element with id 'important-title not found.");
 }
 
 const note =
@@ -70,4 +70,4 @@ document.body.append(newParagraph);
 
 document.body.append("Додатковий текст");
 
-document.body.prepend("Початок сторінки ");
+document.body.prepend("Java Script активний");

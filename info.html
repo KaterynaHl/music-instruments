@@ -122,6 +122,18 @@
         console.log(allLinks);
 
         </script>
-
+    <script>
+            let fact = document.getElementById("important-title");
+    
+            if (fact) {
+    
+                let newTitle =
+                document.createElement("h3");
+    
+                newTitle.textContent = "Текст було замінено";
+    
+                fact.replaceWith(newTitle);
+            }
+        </script>
 </body>
 </html>
