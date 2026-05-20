@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body data-page="info">
 
     <h1 id="main-title">Найбільш відомі музичні інструменти</h1>
 
@@ -39,7 +39,16 @@
         <i>Цікавий факт:</i> справжню трембіту виготовляли з дерева,
         у яке влучила блискавка
     </p>
-    
+
+    <div style="margin: 20px 0; padding: 10px;; border-radius: 32px; display: inline-block;">
+        <button id="btn-highlight-paragraphs" style="padding: 8px 16px; font-family: 'Unbounded'; cursor: pointer; margin-right: 10px;">
+            Підкреслити всі абзаци
+        </button>
+        <button id="btn-update-fact" style="padding: 8px 16px; font-family: 'Unbounded'; cursor: pointer;">
+            Оновити цікавий факт
+        </button>
+    </div>
+
     <li> <h2 id="cymbaly">Цимбали</h2> </li>
     
     <p>
@@ -75,7 +84,8 @@
     </p>
 
     </ul>
-    
+
+
     <dl>
         <dt><b>Трембіта</b></dt>
         <dd>Карпатський духовий інструмент.</dd>
@@ -101,39 +111,7 @@
         Душа Карпат: Музичні інструменти Західної України!
     </div>
 
-    <script>
+    <script src="script.js"></script>
 
-        function compareStrings(str1, str2) {
-        
-            if (str1 > str2) {
-                alert("Більший рядок: " + str1);
-            } else {
-                alert("Більший рядок: " + str2);
-            }
-        }
-        
-        compareStrings("Цимбали  — струнний інструмент", "Трембіта");
-        
-        //пошук заголовка сторінки за id та використання методу getElementById()
-        let title = document.getElementById("main-title");
-        title.style.color = "darkred";
-
-        let allLinks = document.querySelectorAll("a");
-        console.log(allLinks);
-
-        </script>
-    <script>
-            let fact = document.getElementById("important-title");
-    
-            if (fact) {
-    
-                let newTitle =
-                document.createElement("h3");
-    
-                newTitle.textContent = "Текст було замінено";
-    
-                fact.replaceWith(newTitle);
-            }
-        </script>
 </body>
 </html>

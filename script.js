@@ -1,73 +1,107 @@
-// діалог з користувачем при вході на сайт
-function userDialog() {
+function dialogWithUser() {
+    const instruments = ["трембіта", "цимбали", "дуда", "флояра"];
+    let instrument = "";
+    let confirmed = false;
 
-    let instrument = prompt("Який музичний інструмент вам подобається?");
+    while (!confirmed) {
+        instrument = prompt(
+            "Який карпатський музичний інструмент вам найбільше подобається:\nтрембіта, цимбали, дуда чи флояра?"
+        );
 
-    if (instrument === null || instrument === "") {
-        alert("Ви нічого не ввели!");
+        if (instrument === null || instrument.trim() === "") {
+            alert("Ви не ввели назву інструмента.");
+            return;
+        }
+
+        instrument = instrument.trim().toLowerCase();
+
+        if (!instruments.includes(instrument)) {
+            alert("Такого інструмента немає у списку.");
+            continue;
+        }
+
+        confirmed = confirm("Ви обрали інструмент: " + instrument + ". Підтвердити вибір?");
+    }
+    alert("Ваш вибір успішно збережено: " + instrument);
+}
+
+function showDeveloperInfo(lastName, firstName, position = "Студентка") {
+    alert("Розробник сторінки:\n" + lastName + " " + firstName + "\nПосада: " + position);
+}
+
+//порівняння рядків
+function compareStrings(firstString, secondString) {
+    if (firstString > secondString) {
+        alert("Більший рядок: " + firstString);
+    } else if (secondString > firstString) {
+        alert("Більший рядок: " + secondString);
     } else {
-        alert("Ваш улюблений інструмент: " + instrument);
-    }
-
-    for (let i = 1; i <= 3; i++) {
-        console.log("Цикл працює: " + i);
+        alert("Рядки однакові.");
     }
 }
 
-userDialog();
+//зміна фону
+function changeBackgroundForThirtySeconds() {
+    const originalBg = document.body.style.backgroundColor || "#f9ecf7";
+    document.body.style.backgroundColor = "#c8e6f5";
 
-function developerInfo(lastName, firstName, position = "Студент") {
-
-    alert(
-        "Розробник: " +
-        lastName +
-        " " +
-        firstName +
-        "\nПосада: " +
-        position
-    );
+    setTimeout(function () {
+        document.body.style.backgroundColor = originalBg;
+    }, 30000);
 }
-
-developerInfo("Глеба", "Катерина");
-
-// зміна фону
-document.body.style.backgroundColor = "#d8e8ff";
-
-setTimeout(function () {
-    document.body.style.backgroundColor = "#f9ecf7";
-}, 30000);
 
 function goToGallery() {
     location.href = "gallery.html";
 }
-const importantText = document.getElementById("important-title");
 
-if (importantText) {
-    importantText.innerHTML = "<b>Оновлений цікавий факт про трембіту!</b>";
+//innerHTML, outerHTML, textContent
+function useDomProperties() {
+    const importantText = document.getElementById("important-title");
+    if (!importantText) return;
 
-    console.log(importantText.outerHTML);
-    console.log(importantText.textContent);
-    console.log(importantText.firstChild.data);
-} 
-    else {
-    console.error("Element with id 'important-title not found.");
+    importantText.innerHTML = "<b>Цікавий факт:</b> Справжню трембіту роблять лише з громовиці!";
+
+    console.log("outerHTML:", importantText.outerHTML);
+    console.log("textContent:", importantText.textContent);
 }
 
-const note =
-document.getElementById("important-title");
-
-if (note) {
-    note.after(" Додатковий текст після елемента.");
+//пошук елементів та робота з атрибутами (querySelectorAll)
+function useQuerySelectorAll() {
+    const paragraphs = document.querySelectorAll("p");
+    paragraphs.forEach(function (paragraph, index) {
+        paragraph.style.outline = "2px dashed #C080A0";
+        paragraph.dataset.number = index + 1;
+    });
 }
 
-let newParagraph = document.createElement("p");
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Скрипт успішно завантажено.");
 
-let text = document.createTextNode("Новий абзац через JavaScript");
+    //перевірка для index.html
+    if (document.getElementById("main-headline")) {
+        dialogWithUser();
+        showDeveloperInfo("Глеба", "Катерина");
+        changeBackgroundForThirtySeconds();
+    }
 
-newParagraph.append(text);
+    //перевірка для info.html
+    if (document.getElementById("important-title")) {
+        compareStrings("Трембіта", "Цимбали");
 
-document.body.append(newParagraph);
+        //ініціалізація кнопки "підкреслити всі абзаци"
+        const paragraphBtn = document.getElementById("btn-highlight-paragraphs");
+        if (paragraphBtn) {
+            paragraphBtn.addEventListener("click", function () {
+                useQuerySelectorAll();
+            });
+        }
 
-document.body.append("Додатковий текст");
-
-document.body.prepend("Java Script активний");
+        //ініціалізація кнопки "оновити цікавий факт"
+        const factBtn = document.getElementById("btn-update-fact");
+        if (factBtn) {
+            factBtn.addEventListener("click", function () {
+                useDomProperties();
+            });
+        }
+    }
+});

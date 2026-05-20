@@ -13,17 +13,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body data-page="home">
 
     <script>
 
-        alert("Ласкаво просимо на сайт про музичні інструменти!");
-        let userName = prompt("Введіть ваше ім'я:");
-        confirm("Бажаєте продовжити перегляд сайту?");
+    alert("Ласкаво просимо на сайт про музичні інструменти!");
+    let userName = prompt("Введіть ваше ім'я:");
+    confirm("Бажаєте продовжити перегляд сайту?");
         
-        </script>
+    </script>
 
-    <h1 >
+    <h1 id="main-headline">
         <span class="highlight">Душа Карпат:</span> Музичні інструменти Західної України!
     </h1>
 
@@ -66,27 +66,8 @@
     <button onclick="goToGallery()">
         Перейти до галереї
     </button>
-
-    <script>
-        const message = document.createElement("p");
-        message.textContent = "JavaScript успішно підключений!";
-        document.body.appendChild(message);
-    </script>
-
-    <script>
-
-    document.write("<p>document.write() працює!</p>");
-    
-    </script>
-
-    <script>
-   let note = document.querySelector(".special-note");
-    
-    if (note) { 
-        note.remove();
-    }
-     </script>
     
     <script src="script.js"></script>
+
 </body>
 </html>
